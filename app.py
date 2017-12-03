@@ -11,7 +11,7 @@ def transform():
 
         Return: appropriate coordinates as floats
     """
-
+    print("REQUEST: ",request.args)
     old_x = request.args.get('x', 0, type=float)
     old_y = request.args.get('y', 0, type=float)
     old_z = request.args.get('z', 0, type=float)
@@ -26,6 +26,7 @@ def transform():
     elif(from_system == "spherical"):
         system = Spherical(old_x,old_y,old_z)
 
+    # new_x,new_y,new_z = old_x,old_y,old_z
     # Transforms current system into new system
     if(to_system == "cartesian"):
         new_x,new_y,new_z = system.to_cartesian()
