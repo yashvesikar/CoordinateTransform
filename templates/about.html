@@ -29,7 +29,11 @@
       <div>
         <h4 style="padding-left: 20px; padding-top:30px;">About This Project</h4>
         <p style="padding-left: 35px; padding-right:35px; padding-top:20px;">This  system works to convert coordinate systems (Cartesian, Spherical, and Cylindrical) between themselves in 3D space.  Under 'Initial Coordinate System', the user can pick a starting representation and describe the point using the appropriate coordinates (NOTE: all angles in this system use radians as units).   Under 'Final Coordinate System', the user can pick a representation they would like to see the point being represented in.  After the submit button is pressed, the program describes the point in the system chosen under 'Final Coordinate System', and produces two plots.  Both plots display a vector, drawn between the origin and the described point.  The plot on the left side of the screen uses axes that correspond with the initial coordinate system, and likewise the right hand plot uses the final coordinate system.  By displaying both plots simultaneously, the user can see how the coordinate systems relate to one another.  The user can also rotate and zoom in and out of either plot by dragging / scrolling over the plot with the mouse (NOTE: if no vector appears to be drawn on the map, try this method to change the viewpoint).  This allows the user to better understand how the point lies in 3D space.
+        Users can add more than one point to the plots. When this occurs, the program will draw another vector from the origin to the new point. The plot will retain the original axes input, but hovering over any vector will describe the point in the system it was entered in.
       </p>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename = 'about.jpeg') }}"/>
     </div>
       <!-- SCRIPTS -->
       <script type = "text/javascript" src = "{{ url_for('static', filename = 'main.js') }}" ></script>
