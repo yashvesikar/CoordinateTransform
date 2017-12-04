@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  </head>
+
+  <body>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'materialize.min.js') }}" ></script>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo center">ECE 280 -- Honors Option</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <h4 style="padding-left: 20px; padding-top:30px;">About This Project</h4>
+        <p style="padding-left: 35px; padding-right:35px; padding-top:20px;">This  system works to convert coordinate systems (Cartesian, Spherical, and Cylindrical) between themselves in 3D space.  Under 'Initial Coordinate System', the user can pick a starting representation and describe the point using the appropriate coordinates (NOTE: all angles in this system use radians as units).   Under 'Final Coordinate System', the user can pick a representation they would like to see the point being represented in.  After the submit button is pressed, the program describes the point in the system chosen under 'Final Coordinate System', and produces two plots.  Both plots display a vector, drawn between the origin and the described point.  The plot on the left side of the screen uses axes that correspond with the initial coordinate system, and likewise the right hand plot uses the final coordinate system.  By displaying both plots simultaneously, the user can see how the coordinate systems relate to one another.  The user can also rotate and zoom in and out of either plot by dragging / scrolling over the plot with the mouse (NOTE: if no vector appears to be drawn on the map, try this method to change the viewpoint).  This allows the user to better understand how the point lies in 3D space.
+      </p>
+    </div>
+      <!-- SCRIPTS -->
+      <script type = "text/javascript" src = "{{ url_for('static', filename = 'main.js') }}" ></script>
+  </body>
+
+</html>
